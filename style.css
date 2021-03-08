@@ -1,6 +1,6 @@
 @font-face {
     font-family: Uni_Sans_Heavy;
-    src: url(resources/Uni_Sans_Heavy.otf);
+    src: url(Uni_Sans_Heavy.otf);
 }
 
 @keyframes gradient {
@@ -16,67 +16,77 @@
 }
 
 body {
-    background: url(resources/background.jpg1) no-repeat;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    font-family: Uni_Sans_Heavy;
 }
 
-#body {
-    user-select: none;
-    overflow: hidden;
+section {
     position: absolute;
-    width: 580px;
-    left: 50%;
+    display: flex;
+    width: 100%;
+    height: 100%;
     top: 50%;
-    padding: 10px 10px 10px 10px;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 80%;
-    background-color: #F8F8FF;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px #222;
+    justify-content: center;
+    align-items: center;
 }
 
-#guide {
+img {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    z-index: 0;
 }
 
-.maintext{
-    text-align: center;
-    font-size: 160%;
-    font-weight: bold;
-    color: #FF7B54;
+h1 {
+    position: absolute;
+    top: calc(5% + 200px);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #fff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+    z-index: 0;
 }
 
 ul {
-    list-style-type: disc;
+    position: relative;
+    display: flex;
 }
 
-a {
-    font-weight: bold;
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+}
+
+ul li a {
+    position: relative;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
     text-decoration: none;
 }
 
-a:link {
-    color: blue;
-}
-
-a:visited {
-    color: blue;
-}
-
-a:hover {
-    color: #339933;
-}
-
-#discord {
-    color: blue;
-}
-
-#discord:hover {
-    color: #339933;
-    cursor: pointer;
+ul li a:hover {
+    transition: 0.2s;
+    transform: scale(1.25, 1.25);
 }

@@ -62,6 +62,7 @@ h1 {
 ul {
     position: relative;
     display: flex;
+    padding: 0;
 }
 
 ul li {

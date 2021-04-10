@@ -59,10 +59,10 @@ async function LoadFile(sha) {
 async function ShuffleMusic() {
     document.getElementById("button").disabled = true;
     var num = RandomInt(playlist.tree.length);
-    var respone = JSON.parse(await LoadFile(playlist.tree[num].sha));
+    var response = JSON.parse(await LoadFile(playlist.tree[num].sha));
 
-    console.log(`Playing '${playlist.tree[num].path}' | Size: ${BytesToSize(respone.size)}`)
-    PlaySound(respone.content, `audio/${name.split('.').pop()}`);
+    console.log(`Playing '${playlist.tree[num].path}' | Size: ${BytesToSize(response.size)}`)
+    PlaySound(response.content, `audio/${name.split('.').pop()}`);
 }
 
 function PlaySound(base64, type) {

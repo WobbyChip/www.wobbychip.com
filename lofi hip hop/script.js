@@ -111,7 +111,6 @@ function CheckMarquee() {
 function LoadTags(blob) {
     jsmediatags.read(blob, {
         onSuccess: function(tag) {
-            console.log("Loaded metadata.")
             var tags = tag.tags;
 
             if ((tags.title) && (tags.album)) {
@@ -147,6 +146,7 @@ function LoadTags(blob) {
             }
 
             document.getElementById("button").disabled = false;
+            console.log("Loaded metadata.")
         },
         onError: function(error) {
             console.log(error);

@@ -1,4 +1,4 @@
-var splitted = "https://github.com/wobbychip/playlist/tree/main/lofi%20hip%20hop".split("/");
+var splitted = "https://github.com/Temporaly001/playlist/tree/main/lofi%20hip%20hop".split("/");
 var playlist;
 var preload = {};
 var audio = new Audio();

